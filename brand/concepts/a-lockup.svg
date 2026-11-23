@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 256" width="880" height="256">
+  <g>
+  <!-- Top view. Shell = a page with a folded corner; hexagon scute cut in the middle. Flippers tucked close. -->
+  <path fill="#000" fill-rule="evenodd" d="M94 72H144V106H184V180A20 20 0 0 1 164 200H92A20 20 0 0 1 72 180V94A22 22 0 0 1 94 72Z M128 116L150.5 129V155L128 168L105.5 155V129Z"/>
+  <path fill="#000" d="M150 72L184 100H150Z"/>
+  <circle fill="#000" cx="128" cy="46" r="18"/>
+  <path fill="#000" d="M66 92C52 82 36 82 26 92C34 104 52 110 66 108Z"/>
+  <path fill="#000" d="M190 112C204 104 222 104 232 114C222 124 204 126 190 124Z"/>
+  <path fill="#000" d="M66 172C54 172 42 180 38 194C50 196 62 192 68 184Z"/>
+  <path fill="#000" d="M190 172C202 172 214 180 218 194C206 196 194 192 188 184Z"/>
+  <path fill="#000" d="M120 206H136L128 220Z"/>
+</g>
+  <text x="268" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="116" letter-spacing="-2" fill="#000">PDF<tspan font-weight="700">turtle</tspan></text>
+</svg>

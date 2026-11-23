@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">PDFturtle concept C: safe page</title>
+  <!-- Top view. A round shell keeps a page safe inside it: the page is the centre scute, cut out. -->
+  <path fill="#000" fill-rule="evenodd" d="M128 64A72 72 0 1 1 127.9 64Z M110 108H138L154 124V162A8 8 0 0 1 146 170H110A8 8 0 0 1 102 162V116A8 8 0 0 1 110 108Z"/>
+  <path fill="#000" d="M138 108V124H154Z"/>
+  <circle fill="#000" cx="128" cy="40" r="18"/>
+  <ellipse fill="#000" cx="70" cy="90" rx="28" ry="14" transform="rotate(-40 70 90)"/>
+  <ellipse fill="#000" cx="186" cy="90" rx="28" ry="14" transform="rotate(40 186 90)"/>
+  <ellipse fill="#000" cx="76" cy="190" rx="22" ry="12" transform="rotate(40 76 190)"/>
+  <ellipse fill="#000" cx="180" cy="190" rx="22" ry="12" transform="rotate(-40 180 190)"/>
+</svg>

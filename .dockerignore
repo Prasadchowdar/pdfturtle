@@ -1,0 +1,11 @@
+node_modules
+dist
+data
+.git
+*.log
+corpus
+test-results
+e2e-report
+seo-audit
+brand
+infra

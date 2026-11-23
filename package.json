@@ -1,0 +1,58 @@
+{
+  "name": "pdfturtle",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "check": "node check.mjs && node --disable-warning=ExperimentalWarning accounts.mjs",
+    "server": "node --disable-warning=ExperimentalWarning server.mjs",
+    "start": "vite build && node --disable-warning=ExperimentalWarning server.mjs",
+    "e2e": "set PLAYWRIGHT_BROWSERS_PATH=0&& playwright test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.5.0",
+    "@cantoo/fontkit": "^2.0.12",
+    "@cantoo/pdf-lib": "^2.11.1",
+    "@expo-google-fonts/noto-sans": "^0.4.2",
+    "@expo-google-fonts/noto-sans-arabic": "^0.4.3",
+    "@expo-google-fonts/noto-sans-bengali": "^0.4.4",
+    "@expo-google-fonts/noto-sans-devanagari": "^0.4.2",
+    "@expo-google-fonts/noto-sans-gujarati": "^0.4.2",
+    "@expo-google-fonts/noto-sans-gurmukhi": "^0.4.1",
+    "@expo-google-fonts/noto-sans-hebrew": "^0.4.1",
+    "@expo-google-fonts/noto-sans-jp": "^0.4.4",
+    "@expo-google-fonts/noto-sans-kannada": "^0.4.3",
+    "@expo-google-fonts/noto-sans-kr": "^0.4.4",
+    "@expo-google-fonts/noto-sans-malayalam": "^0.4.2",
+    "@expo-google-fonts/noto-sans-oriya": "^0.4.2",
+    "@expo-google-fonts/noto-sans-sc": "^0.4.4",
+    "@expo-google-fonts/noto-sans-sinhala": "^0.4.2",
+    "@expo-google-fonts/noto-sans-tamil": "^0.4.3",
+    "@expo-google-fonts/noto-sans-telugu": "^0.4.2",
+    "@expo-google-fonts/noto-sans-thai": "^0.4.2",
+    "@okathira/ghostpdl-wasm": "^1.1.0",
+    "bidi-js": "^1.1.0",
+    "docx": "^9.15.4",
+    "jszip": "^3.10.2",
+    "mammoth": "^1.13.0",
+    "pdfjs-dist": "^6.5.438",
+    "pptxgenjs": "^4.0.1",
+    "tesseract.js": "^7.0.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@embedpdf/pdfium": "^2.15.1",
+    "@playwright/test": "^1.65.1",
+    "autocannon": "^9.0.0",
+    "vite": "^8.3.8"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "overrides": {
+    "image-size": "2.0.4"
+  },
+  "license": "AGPL-3.0-or-later"
+}

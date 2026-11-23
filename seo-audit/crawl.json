@@ -1,0 +1,1509 @@
+{
+ "base": "http://localhost:5180",
+ "robots": "User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: http://localhost:5180/sitemap.xml\n",
+ "headers": {
+  "cache-control": "no-cache",
+  "connection": "keep-alive",
+  "content-encoding": "gzip",
+  "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' blob: https://cdn.jsdelivr.net; worker-src 'self' blob: https://cdn.jsdelivr.net; connect-src 'self' blob: data: https://cdn.jsdelivr.net https://tessdata.projectnaptha.com; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+  "content-type": "text/html",
+  "cross-origin-opener-policy": "same-origin",
+  "date": "Thu, 19 Nov 2026 10:04:52 GMT",
+  "keep-alive": "timeout=5",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "transfer-encoding": "chunked",
+  "vary": "Accept-Encoding",
+  "x-content-type-options": "nosniff",
+  "x-frame-options": "DENY"
+ },
+ "count": 55,
+ "duplicateTitles": [],
+ "duplicateDescriptions": [],
+ "pages": [
+  {
+   "url": "/",
+   "status": 200,
+   "raw": {
+    "title": "PDFmint: free online PDF tools in your browser",
+    "description": "Merge, split, compress, convert, edit, sign and protect PDFs for free. 34 tools that run in your browser, so your files stay on your device. No sign-up.",
+    "canonical": "http://localhost:5180/",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 852,
+    "lang": "en",
+    "bytes": 16334
+   },
+   "rendered": {
+    "title": "PDFmint: free online PDF tools in your browser",
+    "h1": 1,
+    "h1Text": "Every tool you need to work with PDFs in one place",
+    "headingSkips": 0,
+    "mainWords": 648,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/merge-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Merge PDF online, free · PDFmint",
+    "description": "Merge PDF files into one document in seconds. Drag to set the order, combine as many PDFs as you need. Free, no sign-up, and files stay on your device.",
+    "canonical": "http://localhost:5180/merge-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 370,
+    "lang": "en",
+    "bytes": 10047
+   },
+   "rendered": {
+    "title": "Merge PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Merge PDF",
+    "headingSkips": 0,
+    "mainWords": 173,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/split-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Split PDF online, free · PDFmint",
+    "description": "Split a PDF into separate files by page ranges or every few pages. Extract chapters, invoices or single pages free in your browser, with no upload needed.",
+    "canonical": "http://localhost:5180/split-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 388,
+    "lang": "en",
+    "bytes": 10083
+   },
+   "rendered": {
+    "title": "Split PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Split PDF",
+    "headingSkips": 0,
+    "mainWords": 191,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/remove-pages",
+   "status": 200,
+   "raw": {
+    "title": "Remove pages online, free · PDFmint",
+    "description": "Delete pages from a PDF by number or range: blank pages, ads, cover sheets. Free online and private, because the file is edited in your own browser.",
+    "canonical": "http://localhost:5180/remove-pages",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 337,
+    "lang": "en",
+    "bytes": 9884
+   },
+   "rendered": {
+    "title": "Remove pages online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Remove pages",
+    "headingSkips": 0,
+    "mainWords": 140,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/extract-pages",
+   "status": 200,
+   "raw": {
+    "title": "Extract pages online, free · PDFmint",
+    "description": "Extract selected pages from a PDF into a new file. Pick pages by number or range and keep the originals untouched. Free, fast and processed on your device.",
+    "canonical": "http://localhost:5180/extract-pages",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 339,
+    "lang": "en",
+    "bytes": 9904
+   },
+   "rendered": {
+    "title": "Extract pages online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Extract pages",
+    "headingSkips": 0,
+    "mainWords": 142,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/organize-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Organize PDF online, free · PDFmint",
+    "description": "Reorder, rotate, delete and insert blank pages in a PDF with drag and drop. See every page as a thumbnail and save the new order. Free and private.",
+    "canonical": "http://localhost:5180/organize-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 351,
+    "lang": "en",
+    "bytes": 9934
+   },
+   "rendered": {
+    "title": "Organize PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Organize PDF",
+    "headingSkips": 0,
+    "mainWords": 154,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/scan-to-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Scan to PDF online, free · PDFmint",
+    "description": "Turn phone camera photos of paper documents into a single PDF. Snap pages, keep their order and save one file. Free, with nothing uploaded anywhere.",
+    "canonical": "http://localhost:5180/scan-to-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 328,
+    "lang": "en",
+    "bytes": 9790
+   },
+   "rendered": {
+    "title": "Scan to PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Scan to PDF",
+    "headingSkips": 0,
+    "mainWords": 130,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/compress-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF online, free · PDFmint",
+    "description": "Compress PDF files to a smaller size while keeping text sharp and selectable. Choose extreme, recommended or light compression. Free, no account needed.",
+    "canonical": "http://localhost:5180/compress-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 403,
+    "lang": "en",
+    "bytes": 10691
+   },
+   "rendered": {
+    "title": "Compress PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF",
+    "headingSkips": 0,
+    "mainWords": 206,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 57
+   }
+  },
+  {
+   "url": "/compress-pdf-to-size",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to size online, free · PDFmint",
+    "description": "Compress a PDF to an exact size limit: 50 KB, 100 KB, 200 KB, 500 KB or 1 MB. Made for online forms and portals. Free and private, in your browser.",
+    "canonical": "http://localhost:5180/compress-pdf-to-size",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 449,
+    "lang": "en",
+    "bytes": 10927
+   },
+   "rendered": {
+    "title": "Compress PDF to size online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to size",
+    "headingSkips": 0,
+    "mainWords": 250,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 57
+   }
+  },
+  {
+   "url": "/repair-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Repair PDF online, free · PDFmint",
+    "description": "Repair damaged or corrupt PDF files that will not open or print. Rebuild the file structure and recover readable pages. Free, and runs in your browser.",
+    "canonical": "http://localhost:5180/repair-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 334,
+    "lang": "en",
+    "bytes": 9727
+   },
+   "rendered": {
+    "title": "Repair PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Repair PDF",
+    "headingSkips": 0,
+    "mainWords": 137,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/ocr-pdf",
+   "status": 200,
+   "raw": {
+    "title": "OCR PDF online, free · PDFmint",
+    "description": "Make scanned PDFs searchable with OCR. Recognises text in 33 languages, including Hindi, Tamil, Telugu and Bengali. Free, private, runs in your browser.",
+    "canonical": "http://localhost:5180/ocr-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 350,
+    "lang": "en",
+    "bytes": 9854
+   },
+   "rendered": {
+    "title": "OCR PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "OCR PDF",
+    "headingSkips": 0,
+    "mainWords": 153,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/jpg-to-pdf",
+   "status": 200,
+   "raw": {
+    "title": "JPG to PDF online, free · PDFmint",
+    "description": "Convert JPG, PNG and other images to PDF. Set page size, orientation and margins, and combine many photos into one file. Free and fully in your browser.",
+    "canonical": "http://localhost:5180/jpg-to-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 338,
+    "lang": "en",
+    "bytes": 9901
+   },
+   "rendered": {
+    "title": "JPG to PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "JPG to PDF",
+    "headingSkips": 0,
+    "mainWords": 140,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/word-to-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Word to PDF online, free · PDFmint",
+    "description": "Convert Word documents (DOC, DOCX, ODT, RTF, TXT) to PDF with layout, fonts, tables and images intact. Free online conversion, no sign-up required.",
+    "canonical": "http://localhost:5180/word-to-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 350,
+    "lang": "en",
+    "bytes": 9973
+   },
+   "rendered": {
+    "title": "Word to PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Word to PDF",
+    "headingSkips": 0,
+    "mainWords": 152,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/powerpoint-to-pdf",
+   "status": 200,
+   "raw": {
+    "title": "PowerPoint to PDF online, free · PDFmint",
+    "description": "Convert PowerPoint presentations (PPT, PPTX, ODP) to PDF, one slide per page. Share decks that open anywhere without PowerPoint. Free and quick.",
+    "canonical": "http://localhost:5180/powerpoint-to-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 339,
+    "lang": "en",
+    "bytes": 9961
+   },
+   "rendered": {
+    "title": "PowerPoint to PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PowerPoint to PDF",
+    "headingSkips": 0,
+    "mainWords": 141,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/excel-to-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Excel to PDF online, free · PDFmint",
+    "description": "Convert Excel spreadsheets (XLSX, XLS, CSV, ODS) to PDF with columns, borders and number formats preserved. Share tables that print correctly. Free.",
+    "canonical": "http://localhost:5180/excel-to-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 329,
+    "lang": "en",
+    "bytes": 9896
+   },
+   "rendered": {
+    "title": "Excel to PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Excel to PDF",
+    "headingSkips": 0,
+    "mainWords": 131,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/html-to-pdf",
+   "status": 200,
+   "raw": {
+    "title": "HTML to PDF online, free · PDFmint",
+    "description": "Convert a web page or HTML file to PDF. Paste a URL or upload HTML, then pick page size, orientation, margins and screen width. Free HTML to PDF tool.",
+    "canonical": "http://localhost:5180/html-to-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 377,
+    "lang": "en",
+    "bytes": 10086
+   },
+   "rendered": {
+    "title": "HTML to PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "HTML to PDF",
+    "headingSkips": 0,
+    "mainWords": 181,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-to-jpg",
+   "status": 200,
+   "raw": {
+    "title": "PDF to JPG online, free · PDFmint",
+    "description": "Convert PDF pages to JPG images, or extract every image embedded in a PDF. High-quality output, downloaded as a ZIP. Free and processed in your browser.",
+    "canonical": "http://localhost:5180/pdf-to-jpg",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 334,
+    "lang": "en",
+    "bytes": 9900
+   },
+   "rendered": {
+    "title": "PDF to JPG online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF to JPG",
+    "headingSkips": 0,
+    "mainWords": 136,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-to-word",
+   "status": 200,
+   "raw": {
+    "title": "PDF to Word online, free · PDFmint",
+    "description": "Convert PDF to an editable Word document (DOCX). Paragraphs, headings and tables are rebuilt so you can edit, not retype. Free and private in your browser.",
+    "canonical": "http://localhost:5180/pdf-to-word",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 342,
+    "lang": "en",
+    "bytes": 9982
+   },
+   "rendered": {
+    "title": "PDF to Word online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF to Word",
+    "headingSkips": 0,
+    "mainWords": 144,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-to-powerpoint",
+   "status": 200,
+   "raw": {
+    "title": "PDF to PowerPoint online, free · PDFmint",
+    "description": "Convert PDF to PowerPoint (PPTX), with each page as a slide you can present or edit. Turn reports and handouts into decks. Free, no account needed.",
+    "canonical": "http://localhost:5180/pdf-to-powerpoint",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 332,
+    "lang": "en",
+    "bytes": 9960
+   },
+   "rendered": {
+    "title": "PDF to PowerPoint online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF to PowerPoint",
+    "headingSkips": 0,
+    "mainWords": 134,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-to-excel",
+   "status": 200,
+   "raw": {
+    "title": "PDF to Excel online, free · PDFmint",
+    "description": "Convert PDF tables to Excel (XLSX). Columns are detected and numbers stay numbers, ready for formulas and charts. Free PDF to Excel converter.",
+    "canonical": "http://localhost:5180/pdf-to-excel",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 340,
+    "lang": "en",
+    "bytes": 9898
+   },
+   "rendered": {
+    "title": "PDF to Excel online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF to Excel",
+    "headingSkips": 0,
+    "mainWords": 142,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-to-markdown",
+   "status": 200,
+   "raw": {
+    "title": "PDF to Markdown online, free · PDFmint",
+    "description": "Convert PDF to Markdown with headings, lists and paragraphs kept. Clean text for notes, documentation, static sites and AI tools. Free, in your browser.",
+    "canonical": "http://localhost:5180/pdf-to-markdown",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 314,
+    "lang": "en",
+    "bytes": 9591
+   },
+   "rendered": {
+    "title": "PDF to Markdown online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF to Markdown",
+    "headingSkips": 0,
+    "mainWords": 116,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-to-pdfa",
+   "status": 200,
+   "raw": {
+    "title": "PDF to PDF/A online, free · PDFmint",
+    "description": "Convert PDF to PDF/A (1b, 2b or 3b) for long-term archiving and e-filing portals. Fonts embedded and colours defined, as standards require. Free.",
+    "canonical": "http://localhost:5180/pdf-to-pdfa",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 362,
+    "lang": "en",
+    "bytes": 10045
+   },
+   "rendered": {
+    "title": "PDF to PDF/A online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF to PDF/A",
+    "headingSkips": 0,
+    "mainWords": 163,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/rotate-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Rotate PDF online, free · PDFmint",
+    "description": "Rotate PDF pages 90, 180 or 270 degrees, for all files at once or one by one. Fix sideways and upside-down scans for free, with no upload needed.",
+    "canonical": "http://localhost:5180/rotate-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 308,
+    "lang": "en",
+    "bytes": 9673
+   },
+   "rendered": {
+    "title": "Rotate PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Rotate PDF",
+    "headingSkips": 0,
+    "mainWords": 111,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/add-page-numbers",
+   "status": 200,
+   "raw": {
+    "title": "Page numbers online, free · PDFmint",
+    "description": "Add page numbers to a PDF. Choose the position, a format like “Page 1 of 10”, the first number and which pages to number. Free and done in your browser.",
+    "canonical": "http://localhost:5180/add-page-numbers",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 319,
+    "lang": "en",
+    "bytes": 9846
+   },
+   "rendered": {
+    "title": "Page numbers online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Page numbers",
+    "headingSkips": 0,
+    "mainWords": 122,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/add-watermark",
+   "status": 200,
+   "raw": {
+    "title": "Watermark online, free · PDFmint",
+    "description": "Add a text or image watermark to PDF pages. Set position, transparency, rotation, a repeating mosaic and which pages to mark. Free and on your device.",
+    "canonical": "http://localhost:5180/add-watermark",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 320,
+    "lang": "en",
+    "bytes": 9830
+   },
+   "rendered": {
+    "title": "Watermark online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Watermark",
+    "headingSkips": 0,
+    "mainWords": 124,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/crop-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Crop PDF online, free · PDFmint",
+    "description": "Crop PDF pages to remove margins or keep just one area. Draw the crop box on the page and apply it to one page or all. Free crop tool, nothing uploaded.",
+    "canonical": "http://localhost:5180/crop-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 309,
+    "lang": "en",
+    "bytes": 9704
+   },
+   "rendered": {
+    "title": "Crop PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Crop PDF",
+    "headingSkips": 0,
+    "mainWords": 112,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/edit-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Edit PDF online, free · PDFmint",
+    "description": "Edit PDF online: add text, images, shapes, lines, freehand drawing, highlights and white-out boxes, then save. Free PDF editor that runs in your browser.",
+    "canonical": "http://localhost:5180/edit-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 330,
+    "lang": "en",
+    "bytes": 9810
+   },
+   "rendered": {
+    "title": "Edit PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Edit PDF",
+    "headingSkips": 0,
+    "mainWords": 133,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/pdf-forms",
+   "status": 200,
+   "raw": {
+    "title": "PDF Forms online, free · PDFmint",
+    "description": "Fill in PDF forms online, or add new text fields and checkboxes to any PDF. Flatten answers when done. Free, supports Indian scripts, no upload.",
+    "canonical": "http://localhost:5180/pdf-forms",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 333,
+    "lang": "en",
+    "bytes": 9856
+   },
+   "rendered": {
+    "title": "PDF Forms online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "PDF Forms",
+    "headingSkips": 0,
+    "mainWords": 136,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/unlock-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Unlock PDF online, free · PDFmint",
+    "description": "Remove the password and restrictions from a PDF you are allowed to open, so it can be printed, copied and edited freely. Free, and done in your browser.",
+    "canonical": "http://localhost:5180/unlock-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 315,
+    "lang": "en",
+    "bytes": 9713
+   },
+   "rendered": {
+    "title": "Unlock PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Unlock PDF",
+    "headingSkips": 0,
+    "mainWords": 118,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/protect-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Protect PDF online, free · PDFmint",
+    "description": "Password-protect a PDF with encryption so only people with the password can open it. Secure documents before emailing them. Free, private, in your browser.",
+    "canonical": "http://localhost:5180/protect-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 308,
+    "lang": "en",
+    "bytes": 9715
+   },
+   "rendered": {
+    "title": "Protect PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Protect PDF",
+    "headingSkips": 0,
+    "mainWords": 111,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/sign-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Sign PDF online, free · PDFmint",
+    "description": "Sign a PDF yourself: draw or type your signature, add initials, your name and the date, and place them anywhere on the page. Free e-signature in your browser.",
+    "canonical": "http://localhost:5180/sign-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 324,
+    "lang": "en",
+    "bytes": 9753
+   },
+   "rendered": {
+    "title": "Sign PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Sign PDF",
+    "headingSkips": 0,
+    "mainWords": 127,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/redact-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Redact PDF online, free · PDFmint",
+    "description": "Redact PDFs permanently: black out areas or search for words like names and account numbers. Redacted pages are flattened so nothing stays hidden underneath.",
+    "canonical": "http://localhost:5180/redact-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 330,
+    "lang": "en",
+    "bytes": 9835
+   },
+   "rendered": {
+    "title": "Redact PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Redact PDF",
+    "headingSkips": 0,
+    "mainWords": 133,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/compare-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Compare PDF online, free · PDFmint",
+    "description": "Compare two PDFs and see what changed: a text comparison of added and removed lines, or a visual overlay that highlights differences page by page. Free.",
+    "canonical": "http://localhost:5180/compare-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 313,
+    "lang": "en",
+    "bytes": 9759
+   },
+   "rendered": {
+    "title": "Compare PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compare PDF",
+    "headingSkips": 0,
+    "mainWords": 116,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/summarize-pdf",
+   "status": 200,
+   "raw": {
+    "title": "AI Summarizer online, free · PDFmint",
+    "description": "Summarise a PDF into clear key points: short, medium or long. Understand reports, papers and contracts in seconds. Free AI PDF summariser.",
+    "canonical": "http://localhost:5180/summarize-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 311,
+    "lang": "en",
+    "bytes": 9523
+   },
+   "rendered": {
+    "title": "AI Summarizer online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "AI Summarizer",
+    "headingSkips": 0,
+    "mainWords": 114,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/translate-pdf",
+   "status": 200,
+   "raw": {
+    "title": "Translate PDF online, free · PDFmint",
+    "description": "Translate PDF documents into Hindi, Tamil, Telugu, Bengali, English and 15 more languages. Headings and lists are kept, output as Word. Free.",
+    "canonical": "http://localhost:5180/translate-pdf",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 307,
+    "lang": "en",
+    "bytes": 9538
+   },
+   "rendered": {
+    "title": "Translate PDF online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Translate PDF",
+    "headingSkips": 0,
+    "mainWords": 110,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/compress-pdf-to-50kb",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to 50KB online, free · PDFmint",
+    "description": "Compress a PDF to under 50 KB for strict upload limits on application forms. Finds the best quality that fits. Free, private, no sign-up needed.",
+    "canonical": "http://localhost:5180/compress-pdf-to-50kb",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 464,
+    "lang": "en",
+    "bytes": 11028
+   },
+   "rendered": {
+    "title": "Compress PDF to 50KB online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to 50KB",
+    "headingSkips": 0,
+    "mainWords": 265,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 56
+   }
+  },
+  {
+   "url": "/compress-pdf-to-100kb",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to 100KB online, free · PDFmint",
+    "description": "Compress a PDF to under 100 KB for application forms and portals that cap upload size. Keeps text where it can. Free, private and in your browser.",
+    "canonical": "http://localhost:5180/compress-pdf-to-100kb",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 443,
+    "lang": "en",
+    "bytes": 10959
+   },
+   "rendered": {
+    "title": "Compress PDF to 100KB online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to 100KB",
+    "headingSkips": 0,
+    "mainWords": 244,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 56
+   }
+  },
+  {
+   "url": "/compress-pdf-to-200kb",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to 200KB online, free · PDFmint",
+    "description": "Compress a PDF to under 200 KB for forms and portals with a 200 KB upload limit. Best quality that fits, text kept when possible. Free and private.",
+    "canonical": "http://localhost:5180/compress-pdf-to-200kb",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 419,
+    "lang": "en",
+    "bytes": 10845
+   },
+   "rendered": {
+    "title": "Compress PDF to 200KB online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to 200KB",
+    "headingSkips": 0,
+    "mainWords": 220,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 56
+   }
+  },
+  {
+   "url": "/compress-pdf-to-300kb",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to 300KB online, free · PDFmint",
+    "description": "Compress a PDF to under 300 KB to meet upload limits on job, exam and admission portals. Keeps the most quality that fits. Free, no sign-up needed.",
+    "canonical": "http://localhost:5180/compress-pdf-to-300kb",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 397,
+    "lang": "en",
+    "bytes": 10730
+   },
+   "rendered": {
+    "title": "Compress PDF to 300KB online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to 300KB",
+    "headingSkips": 0,
+    "mainWords": 198,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 56
+   }
+  },
+  {
+   "url": "/compress-pdf-to-500kb",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to 500KB online, free · PDFmint",
+    "description": "Compress a PDF to under 500 KB for portals and email systems with a 500 KB limit. Multi-page scans stay readable. Free and processed privately.",
+    "canonical": "http://localhost:5180/compress-pdf-to-500kb",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 414,
+    "lang": "en",
+    "bytes": 10766
+   },
+   "rendered": {
+    "title": "Compress PDF to 500KB online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to 500KB",
+    "headingSkips": 0,
+    "mainWords": 215,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 56
+   }
+  },
+  {
+   "url": "/compress-pdf-to-1mb",
+   "status": 200,
+   "raw": {
+    "title": "Compress PDF to 1MB online, free · PDFmint",
+    "description": "Compress a PDF to under 1 MB for uploads, email attachments and portals with a 1 MB limit. High quality kept where possible. Free and private.",
+    "canonical": "http://localhost:5180/compress-pdf-to-1mb",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 414,
+    "lang": "en",
+    "bytes": 10792
+   },
+   "rendered": {
+    "title": "Compress PDF to 1MB online, free · PDFmint",
+    "h1": 1,
+    "h1Text": "Compress PDF to 1MB",
+    "headingSkips": 0,
+    "mainWords": 215,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 56
+   }
+  },
+  {
+   "url": "/workflows",
+   "status": 200,
+   "raw": {
+    "title": "PDF workflows: chain tools into one click · PDFmint",
+    "description": "Save a sequence of PDF tools, like merge, add page numbers and compress, with your settings, then run it on any files in one click. Free.",
+    "canonical": "http://localhost:5180/workflows",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 224,
+    "lang": "en",
+    "bytes": 8172
+   },
+   "rendered": {
+    "title": "PDF workflows: chain tools into one click · PDFmint",
+    "h1": 1,
+    "h1Text": "Workflows",
+    "headingSkips": 0,
+    "mainWords": 22,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/features",
+   "status": 200,
+   "raw": {
+    "title": "Features: free, private PDF tools · PDFmint",
+    "description": "See what PDFmint does: 34 PDF tools that run in your browser, support Indian scripts, keep files private and need no account or installation.",
+    "canonical": "http://localhost:5180/page/features",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 338,
+    "lang": "en",
+    "bytes": 9147
+   },
+   "rendered": {
+    "title": "Features: free, private PDF tools · PDFmint",
+    "h1": 1,
+    "h1Text": "Features",
+    "headingSkips": 0,
+    "mainWords": 136,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/pricing",
+   "status": 200,
+   "raw": {
+    "title": "Pricing: every PDF tool free · PDFmint",
+    "description": "PDFmint is free: all PDF tools, workflows and batch processing with no sign-up or watermark. See what is included and what a future plan may add.",
+    "canonical": "http://localhost:5180/page/pricing",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 236,
+    "lang": "en",
+    "bytes": 8453
+   },
+   "rendered": {
+    "title": "Pricing: every PDF tool free · PDFmint",
+    "h1": 1,
+    "h1Text": "Pricing",
+    "headingSkips": 0,
+    "mainWords": 34,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/tools",
+   "status": 200,
+   "raw": {
+    "title": "All PDF tools in one place · PDFmint",
+    "description": "The full list of PDFmint tools to organise, optimise, convert, edit, sign and secure PDFs, grouped by task. Every tool is free and runs in your browser.",
+    "canonical": "http://localhost:5180/page/tools",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 308,
+    "lang": "en",
+    "bytes": 11242
+   },
+   "rendered": {
+    "title": "All PDF tools in one place · PDFmint",
+    "h1": 1,
+    "h1Text": "All tools",
+    "headingSkips": 0,
+    "mainWords": 105,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/faq",
+   "status": 200,
+   "raw": {
+    "title": "PDF tools FAQ: privacy, limits, formats · PDFmint",
+    "description": "Answers about PDFmint: are files uploaded, which tools use a server, file size limits, supported languages and formats, and how to run it yourself.",
+    "canonical": "http://localhost:5180/page/faq",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 420,
+    "lang": "en",
+    "bytes": 9752
+   },
+   "rendered": {
+    "title": "PDF tools FAQ: privacy, limits, formats · PDFmint",
+    "h1": 1,
+    "h1Text": "Frequently asked questions",
+    "headingSkips": 0,
+    "mainWords": 107,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/developers",
+   "status": 200,
+   "raw": {
+    "title": "Developers and self-hosting · PDFmint",
+    "description": "Run PDFmint on your own server with Docker or Node, configure its engines and API, and keep every document inside your own network.",
+    "canonical": "http://localhost:5180/page/developers",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 268,
+    "lang": "en",
+    "bytes": 8555
+   },
+   "rendered": {
+    "title": "Developers and self-hosting · PDFmint",
+    "h1": 1,
+    "h1Text": "Developers & self-hosting",
+    "headingSkips": 0,
+    "mainWords": 67,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/business",
+   "status": 200,
+   "raw": {
+    "title": "PDF tools for business teams · PDFmint",
+    "description": "Private PDF tools for teams: merge, convert, sign and redact documents without uploading client files to a third party. Self-hosting is available.",
+    "canonical": "http://localhost:5180/page/business",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 245,
+    "lang": "en",
+    "bytes": 8382
+   },
+   "rendered": {
+    "title": "PDF tools for business teams · PDFmint",
+    "h1": 1,
+    "h1Text": "PDFmint for business",
+    "headingSkips": 0,
+    "mainWords": 43,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/education",
+   "status": 200,
+   "raw": {
+    "title": "Free PDF tools for students and teachers · PDFmint",
+    "description": "Merge notes, convert assignments, compress uploads and make scans searchable, free and without accounts. Works on school computers and phones.",
+    "canonical": "http://localhost:5180/page/education",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 236,
+    "lang": "en",
+    "bytes": 8343
+   },
+   "rendered": {
+    "title": "Free PDF tools for students and teachers · PDFmint",
+    "h1": 1,
+    "h1Text": "PDFmint for education",
+    "headingSkips": 0,
+    "mainWords": 32,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/security",
+   "status": 200,
+   "raw": {
+    "title": "Security: how PDFmint keeps files safe · PDFmint",
+    "description": "How PDFmint protects your documents: in-browser processing, deleted temporary files for server conversions, strict browser security and no tracking.",
+    "canonical": "http://localhost:5180/page/security",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 334,
+    "lang": "en",
+    "bytes": 8975
+   },
+   "rendered": {
+    "title": "Security: how PDFmint keeps files safe · PDFmint",
+    "h1": 1,
+    "h1Text": "Security",
+    "headingSkips": 0,
+    "mainWords": 131,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/privacy",
+   "status": 200,
+   "raw": {
+    "title": "Privacy policy · PDFmint free PDF tools",
+    "description": "What PDFmint collects and why: most files never leave your device, server conversions are deleted at once, and accounts store only email and workflows.",
+    "canonical": "http://localhost:5180/page/privacy",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 357,
+    "lang": "en",
+    "bytes": 9073
+   },
+   "rendered": {
+    "title": "Privacy policy · PDFmint free PDF tools",
+    "h1": 1,
+    "h1Text": "Privacy policy",
+    "headingSkips": 0,
+    "mainWords": 155,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/terms",
+   "status": 200,
+   "raw": {
+    "title": "Terms and conditions · PDFmint PDF tools",
+    "description": "The terms for using PDFmint’s free PDF tools: acceptable use, your content, availability, limits of liability and how these terms may change.",
+    "canonical": "http://localhost:5180/page/terms",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 267,
+    "lang": "en",
+    "bytes": 8469
+   },
+   "rendered": {
+    "title": "Terms and conditions · PDFmint PDF tools",
+    "h1": 1,
+    "h1Text": "Terms & conditions",
+    "headingSkips": 0,
+    "mainWords": 65,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/cookies",
+   "status": 200,
+   "raw": {
+    "title": "Cookie policy: one sign-in cookie · PDFmint",
+    "description": "PDFmint uses a single cookie, only when you log in, to keep you signed in. There are no advertising or tracking cookies. Read the details here.",
+    "canonical": "http://localhost:5180/page/cookies",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 240,
+    "lang": "en",
+    "bytes": 8309
+   },
+   "rendered": {
+    "title": "Cookie policy: one sign-in cookie · PDFmint",
+    "h1": 1,
+    "h1Text": "Cookies",
+    "headingSkips": 0,
+    "mainWords": 37,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/about",
+   "status": 200,
+   "raw": {
+    "title": "About PDFmint: free PDF tools for everyone",
+    "description": "Why PDFmint exists: complete, free PDF tools that respect privacy, work in Indian languages and run in any browser, on any device.",
+    "canonical": "http://localhost:5180/page/about",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 235,
+    "lang": "en",
+    "bytes": 8244
+   },
+   "rendered": {
+    "title": "About PDFmint: free PDF tools for everyone",
+    "h1": 1,
+    "h1Text": "About us",
+    "headingSkips": 0,
+    "mainWords": 32,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  },
+  {
+   "url": "/page/contact",
+   "status": 200,
+   "raw": {
+    "title": "Contact PDFmint: support and feedback",
+    "description": "Get in touch with PDFmint for support, feedback, bug reports or questions about using or self-hosting the free PDF tools.",
+    "canonical": "http://localhost:5180/page/contact",
+    "robots": "index,follow",
+    "ogImage": true,
+    "twitter": true,
+    "jsonld": 1,
+    "h1": 1,
+    "words": 210,
+    "lang": "en",
+    "bytes": 8077
+   },
+   "rendered": {
+    "title": "Contact PDFmint: support and feedback",
+    "h1": 1,
+    "h1Text": "Contact us",
+    "headingSkips": 0,
+    "mainWords": 9,
+    "imgsNoAlt": 0,
+    "linksNoText": 0,
+    "internalLinks": 51
+   }
+  }
+ ]
+}

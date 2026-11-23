@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">PDFturtle concept C: scute P</title>
+  <!-- Flat-top hexagon shell (one scute) with a head; the P inside is drawn with 60-degree scute angles. -->
+  <path fill="#000" fill-rule="evenodd" d="M224 136L176 52.9H80L32 136L80 219.1H176Z M96 92H146L162 120L146 148H116V196H96Z M116 110H138L144 120L138 130H116Z"/>
+  <circle fill="#000" cx="128" cy="30" r="16"/>
+</svg>

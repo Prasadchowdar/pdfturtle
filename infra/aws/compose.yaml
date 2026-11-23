@@ -1,0 +1,29 @@
+# Run on the server from the project root:
+#   SITE_HOST=15-252-247-212.sslip.io docker compose -f infra/aws/compose.yaml up -d --build
+# SITE_HOST becomes pdfturtle.com once the domain points at the server's IP.
+services:
+  app:
+    build: ../..
+    restart: unless-stopped
+    environment:
+      PDFTURTLE_SITE_URL: https://${SITE_HOST:?set SITE_HOST}
+      PDFTURTLE_TRUST_PROXY: "1" # port 8080 is not published; only caddy reaches it
+    volumes:
+      - data:/app/data
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on: [app]
+    ports: ["80:80", "443:443"]
+    environment:
+      SITE_HOST: ${SITE_HOST}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  data:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">PDFturtle concept A: page shell</title>
+  <!-- Top view. Shell = a page with a folded corner; hexagon scute cut in the middle. -->
+  <path fill="#000" fill-rule="evenodd" d="M92 64H142V102H180V180A16 16 0 0 1 164 196H92A16 16 0 0 1 76 180V80A16 16 0 0 1 92 64Z M128 114L150.5 127V153L128 166L105.5 153V127Z"/>
+  <path fill="#000" d="M148 64L180 96H148Z"/>
+  <circle fill="#000" cx="128" cy="40" r="16"/>
+  <ellipse fill="#000" cx="54" cy="96" rx="22" ry="10" transform="rotate(-30 54 96)"/>
+  <ellipse fill="#000" cx="202" cy="96" rx="22" ry="10" transform="rotate(30 202 96)"/>
+  <ellipse fill="#000" cx="58" cy="184" rx="16" ry="9" transform="rotate(30 58 184)"/>
+  <ellipse fill="#000" cx="198" cy="184" rx="16" ry="9" transform="rotate(-30 198 184)"/>
+  <path fill="#000" d="M120 202H136L128 216Z"/>
+</svg>

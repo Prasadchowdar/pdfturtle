@@ -1,0 +1,112 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: PDFturtle - one Ubuntu ARM server (Docker, Caddy HTTPS) with a fixed IP and a monthly budget alert. Sized to stretch new-account credits; delete the stack to remove everything.
+
+Metadata:
+  AWSToolsMetrics:
+    AWSAgentToolkit: aws-cloudformation@3
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t4g.medium
+  SshPublicKey:
+    Type: String
+    Description: Public half of the admin SSH key (private key stays on the laptop).
+  AdminCidr:
+    Type: String
+    Description: The only address allowed to SSH in, e.g. 1.2.3.4/32.
+  AlertEmail:
+    Type: String
+    Description: Where budget alerts are emailed.
+  MonthlyBudgetUsd:
+    Type: Number
+    Default: 25
+  ImageId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/canonical/ubuntu/server/24.04/stable/current/arm64/hvm/ebs-gp3/ami-id
+
+Resources:
+  KeyPair:
+    Type: AWS::EC2::KeyPair
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Imported public key; the private key never leaves the admin laptop.
+    Properties:
+      KeyName: !Sub "${AWS::StackName}-admin"
+      PublicKeyMaterial: !Ref SshPublicKey
+      Tags: [{ Key: project, Value: pdfturtle }]
+
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Public website with no load balancer, so 80/443 must accept any client; 80 only redirects to HTTPS.
+        must: SSH (22) stays limited to AdminCidr; never open 22 or the app port 8080 to 0.0.0.0/0.
+    Properties:
+      GroupDescription: PDFturtle - web open to all, SSH only from the admin address
+      SecurityGroupIngress:
+        - { IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: 0.0.0.0/0, Description: HTTP (redirects to HTTPS) }
+        - { IpProtocol: tcp, FromPort: 443, ToPort: 443, CidrIp: 0.0.0.0/0, Description: HTTPS }
+        - { IpProtocol: tcp, FromPort: 22, ToPort: 22, CidrIp: !Ref AdminCidr, Description: SSH admin }
+      Tags: [{ Key: project, Value: pdfturtle }]
+
+  Server:
+    Type: AWS::EC2::Instance
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Single burstable ARM host is the cheapest fit for LibreOffice + Chromium conversions (about 4 GB needed).
+        must: No instance role (nothing to steal via SSRF); IMDSv2 with hop limit 1; CPU credits standard so no surprise surplus charges.
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId: !Ref ImageId
+      KeyName: !Ref KeyPair
+      SecurityGroupIds: [!GetAtt WebSecurityGroup.GroupId]
+      CreditSpecification: { CPUCredits: standard } # throttle instead of billing extra CPU
+      MetadataOptions: { HttpTokens: required, HttpPutResponseHopLimit: 1 } # containers can't reach instance metadata
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs: { VolumeSize: 20, VolumeType: gp3, Encrypted: true, DeleteOnTermination: true }
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          set -eux
+          fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
+          echo '/swapfile none swap sw 0 0' >> /etc/fstab
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y docker.io docker-compose-v2
+          usermod -aG docker ubuntu
+          systemctl enable --now docker
+          touch /var/lib/pdfturtle-ready
+      Tags:
+        - { Key: Name, Value: pdfturtle }
+        - { Key: project, Value: pdfturtle }
+
+  PublicIp:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref Server
+      Tags: [{ Key: project, Value: pdfturtle }]
+
+  MonthlyBudget:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: !Sub "${AWS::StackName}-monthly"
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit: { Amount: !Ref MonthlyBudgetUsd, Unit: USD }
+        CostTypes: { IncludeCredit: false, IncludeRefund: false } # count usage before credits, to watch the burn
+      NotificationsWithSubscribers:
+        - Notification: { NotificationType: ACTUAL, ComparisonOperator: GREATER_THAN, Threshold: 60 }
+          Subscribers: [{ SubscriptionType: EMAIL, Address: !Ref AlertEmail }]
+        - Notification: { NotificationType: ACTUAL, ComparisonOperator: GREATER_THAN, Threshold: 100 }
+          Subscribers: [{ SubscriptionType: EMAIL, Address: !Ref AlertEmail }]
+        - Notification: { NotificationType: FORECASTED, ComparisonOperator: GREATER_THAN, Threshold: 100 }
+          Subscribers: [{ SubscriptionType: EMAIL, Address: !Ref AlertEmail }]
+
+Outputs:
+  PublicIp:
+    Value: !Ref PublicIp
+  InstanceId:
+    Value: !Ref Server

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>PDFturtle</title><g transform="translate(-35.88 -29.86) scale(1.205)">
+  <title id="t">PDFturtle</title>
+  <g fill="#135c2a">
+  <g transform="translate(-6 -18)">
+    <path d="M40 172V134H82V92H128A68 68 0 0 1 196 160V172Z"/>
+    <path d="M40 128L76 92V128Z"/>
+    <path d="M184 146L208 116L226 128L196 172Z"/>
+    <circle cx="224" cy="126" r="20"/>
+    <path d="M56 166H90V196A10 10 0 0 1 80 206H66A10 10 0 0 1 56 196Z"/>
+    <path d="M146 166H180V196A10 10 0 0 1 170 206H156A10 10 0 0 1 146 196Z"/>
+  </g>
+  </g>
+</g></svg>

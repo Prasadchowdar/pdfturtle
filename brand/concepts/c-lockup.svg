@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 256" width="880" height="256">
+  <g>
+  <!-- Top view. A round shell keeps a page safe inside it: the page is the centre scute, cut out. -->
+  <path fill="#000" fill-rule="evenodd" d="M128 64A72 72 0 1 1 127.9 64Z M110 106H138L156 124V164A8 8 0 0 1 148 172H110A8 8 0 0 1 102 164V114A8 8 0 0 1 110 106Z"/>
+  <path fill="#000" d="M138 106V124H156Z"/>
+  <circle fill="#000" cx="128" cy="40" r="18"/>
+  <path fill="#000" transform="translate(66 88) rotate(20)" d="M0 -9C-14 -18 -34 -17 -44 -4C-34 8 -14 10 0 9Z"/>
+  <path fill="#000" transform="translate(190 88) scale(-1 1) rotate(20)" d="M0 -9C-14 -18 -34 -17 -44 -4C-34 8 -14 10 0 9Z"/>
+  <path fill="#000" transform="translate(74 192) rotate(-30)" d="M0 -8C-10 -14 -24 -13 -32 -3C-24 6 -10 8 0 8Z"/>
+  <path fill="#000" transform="translate(182 192) scale(-1 1) rotate(-30)" d="M0 -8C-10 -14 -24 -13 -32 -3C-24 6 -10 8 0 8Z"/>
+  <path fill="#000" d="M121 214H135L128 226Z"/>
+</g>
+  <text x="268" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="116" letter-spacing="-2" fill="#000">PDF<tspan font-weight="700">turtle</tspan></text>
+</svg>
