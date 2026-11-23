@@ -76,7 +76,7 @@ function testedHTML(t, c) {
   </tbody></table></div>
   <figure class="results-fig"><img src="/results/${slug}.jpg" width="1240" height="393" loading="lazy" alt="A scanned mark sheet before and after compressing to ${esc(label)}: the original on the left, PDFturtle's result on the right">
   <figcaption>Part of page 1 of the three-page mark sheet sample: original on the left, after compressing to ${esc(label)} on the right.</figcaption></figure>
-  <p class="results-note">How we tested: four fictional sample documents (two flatbed scans, phone photos of a form and a typed report) were run through this exact tool on 23 November 2026. A kilobyte here is 1,000 bytes. The samples and the test script are part of our <a href="${SOURCE_URL}/tree/main/seo-audit/size-tests" rel="noopener">open-source code</a>, so anyone can repeat the test.</p>`;
+  <p class="results-note">How we tested: four fictional sample documents (two flatbed scans, phone photos of a form and a typed report) were run through this tool's code on our test computer on 23 November 2026, using Ghostscript's WebAssembly build; the live site uses the native build, so exact sizes can differ a little. A kilobyte here is 1,000 bytes. The samples and the test script are part of our <a href="${SOURCE_URL}/tree/main/seo-audit/size-tests" rel="noopener">open-source code</a>, so anyone can repeat the test.</p>`;
 }
 
 // How-to steps, explanation and related tools under the tool's file picker.
