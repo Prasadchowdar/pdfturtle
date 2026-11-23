@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: PDFturtle - day-to-day IAM user so the root user stays unused. PowerUser rights (no IAM, Organizations or account changes) plus CLI sign-in via aws login.
+
+Metadata:
+  AWSToolsMetrics:
+    AWSAgentToolkit: aws-cloudformation@3
+
+Parameters:
+  UserName:
+    Type: String
+    Default: pdfturtle-dev
+
+Resources:
+  DevUser:
+    Type: AWS::IAM::User
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Root is for account-level tasks only; daily CLI and agent work runs as this user.
+        must: No access keys and no login password in this template; the console password and MFA are set by the owner in the console.
+    Properties:
+      UserName: !Ref UserName
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/PowerUserAccess # everything except IAM, Organizations and account settings
+        - arn:aws:iam::aws:policy/SignInLocalDevelopmentAccess # needed for `aws login` as an IAM user
+        - arn:aws:iam::aws:policy/IAMUserChangePassword # lets the user change their own password
+      Tags: [{ Key: project, Value: pdfturtle }]
+
+Outputs:
+  UserArn:
+    Value: !GetAtt DevUser.Arn
+  ConsoleSignInUrl:
+    Value: !Sub "https://${AWS::AccountId}.signin.aws.amazon.com/console"

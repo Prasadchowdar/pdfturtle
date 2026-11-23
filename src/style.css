@@ -213,8 +213,8 @@ body.dropping::after { content: "Drop files here"; position: fixed; inset: 12px;
 .wf-card .ico { font-size: 20px; }
 .acct { margin-left: auto; display: flex; align-items: center; }
 .acct-btns { display: flex; gap: 8px; align-items: center; }
-.acct-login { font-size: 14px; font-weight: 500; color: var(--ink-strong); padding: 0 8px; }
-.acct-signup { font-size: 14px; font-weight: 500; background: var(--brand); color: #fff; padding: 6px 14px; border-radius: 6px; }
+.acct-login { font-size: 14px; font-weight: 500; color: var(--ink-strong); padding: 0 8px; white-space: nowrap; }
+.acct-signup { font-size: 14px; font-weight: 500; background: var(--brand); color: #fff; padding: 6px 14px; border-radius: 6px; white-space: nowrap; }
 .acct-name { display: flex; align-items: center; gap: 8px; font-size: 14px !important; text-transform: none !important; }
 .avatar { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 600; }
 .acct-menu .drop { right: 0; left: auto; }
@@ -258,6 +258,10 @@ body.dropping::after { content: "Drop files here"; position: fixed; inset: 12px;
   .fcard { width: 150px; height: 210px; }
   .fcard .x { display: grid; }
   .bigbtn { min-width: 0; width: 100%; }
+  nav > a, .menu > button { white-space: nowrap; padding: 0 4px; margin: 0 2px; }
+  .acct-btns { gap: 4px; }
+  .acct-login { padding: 0 6px; }
+  .acct-signup { padding: 6px 10px; }
 }
 
 /* Section headings that were h3/h4 (heading order for SEO and screen readers): keep their old size. */
