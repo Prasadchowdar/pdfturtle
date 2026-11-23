@@ -94,28 +94,54 @@ export async function compress(bytes, level) {
   return candidates.reduce((a, b) => (b.length < a.length ? b : a));
 }
 
+// Server (Ghostscript) settings from best to smallest: [max image dpi, JPEG QFactor]. Text and vectors are kept.
+const FIT_LADDER = [[300, 0.15], [200, 0.15], [200, 0.25], [150, 0.25], [150, 0.4], [120, 0.4], [120, 0.6], [100, 0.6], [90, 0.76], [72, 0.76], [72, 1], [60, 1.3]];
 // Page-image settings from best to smallest: [dpi, JPEG quality, grayscale].
 const SIZE_LADDER = [[150, 0.8], [130, 0.72], [110, 0.65], [96, 0.58], [84, 0.5], [72, 0.45], [64, 0.4], [56, 0.35], [48, 0.3], [48, 0.3, true], [40, 0.25, true], [32, 0.2, true]];
 
+// Smallest index whose result fits, given that the last index fits. Sizes along a ladder are not strictly
+// monotonic, so the binary search is followed by a linear check.
+async function bestFit(n, at, target) {
+  let lo = 0, hi = n - 1;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if ((await at(mid)).length <= target) hi = mid; else lo = mid + 1; }
+  while ((await at(lo)).length > target) lo++;
+  return lo;
+}
+
 // Compress to at most `target` bytes, changing as little as possible. In order: the file as is, lossless
-// restructuring, the server's Ghostscript levels (keep text selectable), then whole pages as images at the
-// best ladder step that fits (binary search; text is then no longer selectable). Returns the best fit, or
-// the smallest result with fits: false when even the last step is too big.
+// restructuring, the server's Ghostscript at the best FIT_LADDER step that fits (keeps text selectable), then
+// whole pages as images at the best SIZE_LADDER step that fits (text is then no longer selectable). Returns
+// the best fit, or the smallest result with fits: false when even the last step is too big.
 export async function compressTo(bytes, target, progress = () => {}) {
   if (bytes.length <= target) return { bytes, fits: true, method: 'unchanged' };
   const lossless = await compressLossless(bytes);
   if (lossless.length <= target) return { bytes: lossless, fits: true, method: 'lossless' };
-  for (const level of ['low', 'recommended', 'extreme']) {
-    progress('Compressing, keeping text…');
-    let out = null;
-    try { out = await api('compress', bytes, { level }); } catch { break; } // server refused this file: go to images
-    if (!out) break; // no server
-    if (out.length <= target) return { bytes: out, fits: true, method: 'text' };
-  }
+  const gs = new Map();
+  const gsAt = async (i) => {
+    if (!gs.has(i)) {
+      progress(`Compressing, keeping text (try ${gs.size + 1})…`);
+      const [dpi, qf] = FIT_LADDER[i];
+      const out = await api('compress', bytes, { level: 'fit', dpi, qf });
+      if (!out) throw new Error('no server');
+      gs.set(i, out);
+    }
+    return gs.get(i);
+  };
+  let fit = null; // best Ghostscript result that fits (keeps text selectable)
+  try { // check the smallest step first: if even that is too big, skip straight to page images
+    if ((await gsAt(FIT_LADDER.length - 1)).length <= target) {
+      const i = await bestFit(FIT_LADDER.length, gsAt, target);
+      fit = { bytes: await gsAt(i), fits: true, method: 'text', dpi: FIT_LADDER[i][0] };
+    }
+  } catch { /* no server, or it refused this file: go to images */ }
+  if (fit && fit.dpi >= 100) return fit;
   // Short files: render every page once at 150 DPI and only rescale + re-encode per attempt (much faster).
   // Long files: render each page per attempt instead, so memory stays at one page (~9 MB per A4 page).
   progress('Reading pages…');
   const pdf = await openPdf(bytes);
+  // A low-resolution text-keeping result still wins when there is text to keep. A scan has none, and redrawing
+  // its pages can be sharper at the same size, so then try that too and keep whichever has more DPI.
+  if (fit && (await hasText(pdf))) return fit;
   const top = 150, cache = pdf.numPages <= 15;
   const pages = [];
   for (let n = 1; n <= pdf.numPages; n++) pages.push({ n, vp: (await pdf.getPage(n)).getViewport({ scale: 1 }), canvas: cache ? await renderPage(pdf, n, top / 72) : null });
@@ -142,16 +168,12 @@ export async function compressTo(bytes, target, progress = () => {}) {
     }
     return tried.get(i);
   };
-  let lo = 0, hi = SIZE_LADDER.length - 1;
-  if ((await at(hi)).length > target) {
-    const smallest = [lossless, ...tried.values()].reduce((a, b) => (b.length < a.length ? b : a));
+  if ((await at(SIZE_LADDER.length - 1)).length > target) {
+    if (fit) return fit;
+    const smallest = [lossless, ...gs.values(), ...tried.values()].reduce((a, b) => (b.length < a.length ? b : a));
     return { bytes: smallest, fits: false, method: 'images' };
   }
-  while (lo < hi) { // smallest index (best quality) whose output fits
-    const mid = (lo + hi) >> 1;
-    if ((await at(mid)).length <= target) hi = mid; else lo = mid + 1;
-  }
-  while ((await at(lo)).length > target) lo++; // sizes aren't strictly monotonic; the last step is known to fit
+  const lo = await bestFit(SIZE_LADDER.length, at, target);
   // Ladder steps are coarse: raise JPEG quality at this resolution to use the room left under the limit.
   const [dpi, q0, gray] = SIZE_LADDER[lo];
   let best = await at(lo), qLo = q0, qHi = 0.92;
@@ -160,7 +182,16 @@ export async function compressTo(bytes, target, progress = () => {}) {
     const q = (qLo + qHi) / 2, out = await build(dpi, q, gray);
     if (out.length <= target) { best = out; qLo = q; } else qHi = q;
   }
+  if (fit && fit.dpi >= dpi) return fit;
   return { bytes: best, fits: true, method: gray ? 'images-gray' : 'images', dpi };
+}
+
+// Whether any of the first pages has real text (a scan usually has none).
+async function hasText(pdf) {
+  for (let n = 1; n <= Math.min(pdf.numPages, 3); n++) {
+    if ((await (await pdf.getPage(n)).getTextContent()).items.some((it) => it.str?.trim())) return true;
+  }
+  return false;
 }
 
 function toGray(canvas) {

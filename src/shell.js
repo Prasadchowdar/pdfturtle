@@ -63,7 +63,7 @@ const howTo = (t) => (/^(AI |PDF Forms)/.test(t.name) ? `How to use ${t.name}`
 // "Tested" section of a size page: measured results from seo-audit/size-tests/measure.mjs.
 const kb = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(2)} MB` : `${Math.round(n / 1000)} KB`);
 const DID = { unchanged: () => 'Already under the limit: returned unchanged', lossless: () => 'Rebuilt without any quality loss',
-  text: () => 'Compressed with Ghostscript; any text stays selectable',
+  text: (r) => `Compressed with Ghostscript${r.dpi ? `, images kept at up to ${r.dpi} DPI` : ''}; any text stays selectable`,
   images: (r) => `Last resort: pages redrawn as images at ${r.dpi} DPI`,
   'images-gray': (r) => `Last resort: pages redrawn as grayscale images at ${r.dpi} DPI` };
 function testedHTML(t, c) {

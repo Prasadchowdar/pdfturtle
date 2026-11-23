@@ -5,11 +5,11 @@ export const SIZE_RESULTS = {
   {
    "sample": "Scanned certificate, 1 page, colour, 200 DPI",
    "original": 274545,
-   "size": 38501,
+   "size": 48889,
    "fits": true,
-   "method": "text",
-   "dpi": null,
-   "seconds": 2.1
+   "method": "images",
+   "dpi": 96,
+   "seconds": 3.8
   },
   {
    "sample": "Scanned mark sheets, 3 pages, colour, 200 DPI",
@@ -18,7 +18,7 @@ export const SIZE_RESULTS = {
    "fits": true,
    "method": "images",
    "dpi": 56,
-   "seconds": 3.4
+   "seconds": 1.9
   },
   {
    "sample": "Phone photos of a filled form, 2 pages",
@@ -27,27 +27,27 @@ export const SIZE_RESULTS = {
    "fits": true,
    "method": "images",
    "dpi": 72,
-   "seconds": 4.4
+   "seconds": 5.3
   },
   {
    "sample": "Typed report with selectable text, 7 pages",
    "original": 59439,
-   "size": 48582,
+   "size": 48999,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 1.3
+   "dpi": 300,
+   "seconds": 3.4
   }
  ],
  "100kb": [
   {
    "sample": "Scanned certificate, 1 page, colour, 200 DPI",
    "original": 274545,
-   "size": 38501,
+   "size": 98289,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 1.9
+   "dpi": 120,
+   "seconds": 2.5
   },
   {
    "sample": "Scanned mark sheets, 3 pages, colour, 200 DPI",
@@ -56,16 +56,16 @@ export const SIZE_RESULTS = {
    "fits": true,
    "method": "images",
    "dpi": 84,
-   "seconds": 3.5
+   "seconds": 5.9
   },
   {
    "sample": "Phone photos of a filled form, 2 pages",
    "original": 1972024,
-   "size": 66656,
+   "size": 99275,
    "fits": true,
-   "method": "text",
-   "dpi": null,
-   "seconds": 3.8
+   "method": "images",
+   "dpi": 110,
+   "seconds": 5.5
   },
   {
    "sample": "Typed report with selectable text, 7 pages",
@@ -81,29 +81,29 @@ export const SIZE_RESULTS = {
   {
    "sample": "Scanned certificate, 1 page, colour, 200 DPI",
    "original": 274545,
-   "size": 38501,
+   "size": 166418,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 1.9
+   "dpi": 150,
+   "seconds": 3
   },
   {
    "sample": "Scanned mark sheets, 3 pages, colour, 200 DPI",
    "original": 727814,
-   "size": 117394,
+   "size": 179053,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.6
+   "dpi": 100,
+   "seconds": 3.9
   },
   {
    "sample": "Phone photos of a filled form, 2 pages",
    "original": 1972024,
-   "size": 174704,
+   "size": 154116,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.3
+   "dpi": 120,
+   "seconds": 4.2
   },
   {
    "sample": "Typed report with selectable text, 7 pages",
@@ -128,20 +128,20 @@ export const SIZE_RESULTS = {
   {
    "sample": "Scanned mark sheets, 3 pages, colour, 200 DPI",
    "original": 727814,
-   "size": 117394,
+   "size": 270218,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.8
+   "dpi": 120,
+   "seconds": 3.7
   },
   {
    "sample": "Phone photos of a filled form, 2 pages",
    "original": 1972024,
-   "size": 174703,
+   "size": 272420,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.1
+   "dpi": 150,
+   "seconds": 5.6
   },
   {
    "sample": "Typed report with selectable text, 7 pages",
@@ -166,20 +166,20 @@ export const SIZE_RESULTS = {
   {
    "sample": "Scanned mark sheets, 3 pages, colour, 200 DPI",
    "original": 727814,
-   "size": 117394,
+   "size": 460286,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.6
+   "dpi": 150,
+   "seconds": 4.9
   },
   {
    "sample": "Phone photos of a filled form, 2 pages",
    "original": 1972024,
-   "size": 174704,
+   "size": 272420,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.2
+   "dpi": 150,
+   "seconds": 7.1
   },
   {
    "sample": "Typed report with selectable text, 7 pages",
@@ -213,11 +213,11 @@ export const SIZE_RESULTS = {
   {
    "sample": "Phone photos of a filled form, 2 pages",
    "original": 1972024,
-   "size": 174704,
+   "size": 868991,
    "fits": true,
    "method": "text",
-   "dpi": null,
-   "seconds": 2.2
+   "dpi": 200,
+   "seconds": 5.8
   },
   {
    "sample": "Typed report with selectable text, 7 pages",

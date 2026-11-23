@@ -144,11 +144,25 @@ const ops = {
     return readOut(out);
   },
   async compress(dir, body, q) {
-    const preset = { extreme: '/screen', recommended: '/ebook', low: '/printer' }[q.get('level')] || '/ebook';
     const input = path.join(dir, 'in.pdf'), out = path.join(dir, 'out.pdf');
     await fs.writeFile(input, body);
-    await ghostscript(input, out, ['-sDEVICE=pdfwrite', '-dCompatibilityLevel=1.5', `-dPDFSETTINGS=${preset}`, '-dDetectDuplicateImages=true',
-      '-dBATCH', '-dNOPAUSE', '-dQUIET', '-dSAFER']);
+    const common = ['-sDEVICE=pdfwrite', '-dCompatibilityLevel=1.5', '-dDetectDuplicateImages=true', '-dBATCH', '-dNOPAUSE', '-dQUIET', '-dSAFER'];
+    if (q.get('level') === 'fit') {
+      // Compress to size: images at most `dpi` and JPEG QFactor `qf` (0.15 near-original ... 1.3 rough); text and
+      // vectors untouched. Both go into PostScript, so only clamped numbers ever reach it.
+      const dpi = Math.round(Math.min(600, Math.max(36, Number(q.get('dpi')) || 150)));
+      const qf = Math.min(2, Math.max(0.05, Number(q.get('qf')) || 0.5)).toFixed(2);
+      const dict = `<< /QFactor ${qf} /Blend 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >>`;
+      const ps = path.join(dir, 'fit.ps');
+      await fs.writeFile(ps, `<< /ColorImageDict ${dict} /GrayImageDict ${dict} >> setdistillerparams\n`);
+      await ghostscript(input, out, [...common, '-dDownsampleColorImages=true', '-dDownsampleGrayImages=true',
+        `-dColorImageResolution=${dpi}`, `-dGrayImageResolution=${dpi}`, '-dColorImageDownsampleThreshold=1.0', '-dGrayImageDownsampleThreshold=1.0',
+        '-dColorImageDownsampleType=/Bicubic', '-dGrayImageDownsampleType=/Bicubic',
+        '-dAutoFilterColorImages=false', '-dAutoFilterGrayImages=false', '-dColorImageFilter=/DCTEncode', '-dGrayImageFilter=/DCTEncode', ps]);
+    } else {
+      const preset = { extreme: '/screen', recommended: '/ebook', low: '/printer' }[q.get('level')] || '/ebook';
+      await ghostscript(input, out, [...common, `-dPDFSETTINGS=${preset}`]);
+    }
     const res = await readOut(out);
     return res.length < body.length ? res : body; // never hand back a bigger file
   },
