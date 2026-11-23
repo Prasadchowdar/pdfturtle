@@ -269,6 +269,17 @@ body.dropping::after { content: "Drop files here"; position: fixed; inset: 12px;
 .drop .dh { display: block; }
 .foot-cols h2 { font-weight: 700; }
 
+/* Measured results on the compress-to-size pages */
+.results-wrap { overflow-x: auto; margin: 12px 0; }
+.results { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.4; background: var(--panel); }
+.results th, .results td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+.results th { background: var(--btn-soft); color: var(--ink-head); font-weight: 600; }
+.results td:nth-child(2), .results td:nth-child(3) { white-space: nowrap; }
+.results-fig { margin: 16px 0; }
+.results-fig img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+.results-fig figcaption, .results-note { font-size: 13px; color: var(--muted); }
+.results-note a { color: var(--brand); text-decoration: underline; }
+
 /* Tool page explainer (how-to, about, related tools) */
 .tool-info { max-width: 860px; margin: 56px auto 0; padding: 0 16px; color: var(--ink); text-align: left; line-height: 1.65; }
 .tool-info h2 { color: var(--ink-head); font-size: 24px; font-weight: 500; margin: 40px 0 12px; }

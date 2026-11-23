@@ -10,7 +10,7 @@ const scan = async (page) => {
   return r.violations.map((v) => `${v.impact} ${v.id}: ${v.help} ${v.nodes.map((n) => `${n.target} ${n.any[0]?.data?.contrastRatio ?? ''}`).join(', ')}`);
 };
 
-for (const route of ['/', '/merge-pdf', '/login', '/signup', '/workflows', '/page/pricing']) {
+for (const route of ['/', '/merge-pdf', '/compress-pdf-to-100kb', '/login', '/signup', '/workflows', '/page/pricing']) {
   test(`a11y ${route}`, async ({ page }) => {
     await page.goto(route);
     await page.waitForLoadState('networkidle');

@@ -4,6 +4,7 @@ import { TOOLS, CATS, color, SIZE_PAGES } from './tools.js';
 import { TOOL_CONTENT } from './content.js';
 import { pageHTML } from './pages.js';
 import { workflowCard } from './workflows.js';
+import { SIZE_RESULTS } from './size-results.js';
 
 // AGPL-3.0 section 13: users of the public site must be offered the source of the version they are using.
 export const SOURCE_URL = 'https://github.com/Prasadchowdar/pdfturtle';
@@ -59,6 +60,25 @@ const howTo = (t) => (/^(AI |PDF Forms)/.test(t.name) ? `How to use ${t.name}`
   : t.cat === 'convert' ? `How to convert ${t.name.replace(/^(\w+) to/, '$1 to')}`
     : `How to ${t.name[0].toLowerCase()}${t.name.slice(1)}`);
 
+// "Tested" section of a size page: measured results from seo-audit/size-tests/measure.mjs.
+const kb = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(2)} MB` : `${Math.round(n / 1000)} KB`);
+const DID = { unchanged: () => 'Already under the limit: returned unchanged', lossless: () => 'Rebuilt without any quality loss',
+  text: () => 'Compressed with Ghostscript; any text stays selectable',
+  images: (r) => `Last resort: pages redrawn as images at ${r.dpi} DPI`,
+  'images-gray': (r) => `Last resort: pages redrawn as grayscale images at ${r.dpi} DPI` };
+function testedHTML(t, c) {
+  const slug = t.id.replace('compress-pdf-to-', ''), rows = SIZE_RESULTS[slug];
+  if (!rows || !c.tested) return '';
+  const label = t.name.replace('Compress PDF to ', '');
+  return `<h2>Tested: what fits in ${esc(label)}</h2><p>${esc(c.tested)}</p>
+  <div class="results-wrap"><table class="results"><thead><tr><th>Sample document</th><th>Original</th><th>Result</th><th>What PDFturtle did</th></tr></thead><tbody>
+  ${rows.map((r) => `<tr><td>${esc(r.sample)}</td><td>${kb(r.original)}</td><td>${r.fits ? '' : 'Too big: '}${kb(r.size)}</td><td>${esc((DID[r.method] || DID.text)(r))}</td></tr>`).join('')}
+  </tbody></table></div>
+  <figure class="results-fig"><img src="/results/${slug}.jpg" width="1240" height="393" loading="lazy" alt="A scanned mark sheet before and after compressing to ${esc(label)}: the original on the left, PDFturtle's result on the right">
+  <figcaption>Part of page 1 of the three-page mark sheet sample: original on the left, after compressing to ${esc(label)} on the right.</figcaption></figure>
+  <p class="results-note">How we tested: four fictional sample documents (two flatbed scans, phone photos of a form and a typed report) were run through this exact tool on 23 November 2026. A kilobyte here is 1,000 bytes. The samples and the test script are part of our <a href="${SOURCE_URL}/tree/main/seo-audit/size-tests" rel="noopener">open-source code</a>, so anyone can repeat the test.</p>`;
+}
+
 // How-to steps, explanation and related tools under the tool's file picker.
 export function toolInfoHTML(t) {
   const c = TOOL_CONTENT[t.id];
@@ -69,6 +89,7 @@ export function toolInfoHTML(t) {
   return `<section class="tool-info">
   <h2>${esc(howTo(t))}</h2><ol>${c.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
   <h2>About ${esc(t.name)}</h2>${c.about.map((p) => `<p>${esc(p)}</p>`).join('')}
+  ${testedHTML(t, c)}
   ${c.tips ? `<h2>${esc(c.tipsTitle || 'Tips')}</h2><ul>${c.tips.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>` : ''}
   ${sizes.length ? `<h2>Compress a PDF to a specific size</h2><div class="chips">${sizes.map(link).join('')}</div>` : ''}
   ${related.length ? `<h2>Related tools</h2><div class="chips">${related.map((x) => link(x.id)).join('')}</div>` : ''}

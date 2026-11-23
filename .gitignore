@@ -11,3 +11,4 @@ brand/renders/
 *.log
 *.tgz
 .env*
+seo-audit/size-tests/samples/
